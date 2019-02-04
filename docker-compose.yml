@@ -7,5 +7,8 @@ services:
     volumes:
     - .:/app:cached
     working_dir: /app
+    environment:
+      NETWORK_CODE: ${NETWORK_CODE}
+      JSON_KEY_FILE_PATH: ${JSON_KEY_FILE_PATH}
     ports:
       - "9017:80"
