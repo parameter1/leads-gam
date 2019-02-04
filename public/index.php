@@ -1,6 +1,6 @@
 <?php
 require '../vendor/autoload.php';
-require 'container.php';
+require '../src/container.php';
 
 use Limit0\Controller\HomeController;
 use Slim\App;
