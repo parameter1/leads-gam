@@ -1,6 +1,6 @@
 #!/bin/bash
 docker-compose run \
-  --entrypoint php \
+  --entrypoint /usr/bin/composer \
   --no-deps \
   app \
-  /var/www/html/composer.phar $@
+  $@
