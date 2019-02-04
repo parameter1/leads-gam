@@ -51,7 +51,7 @@ class ServiceFactory {
         'applicationName' => 'Lead Management',
       ],
       'OAUTH2' => [
-        'jsonKeyFilePath' => realpath(getenv('JSON_KEY_FILE_PATH')),
+        'jsonKeyFilePath' => getenv('JSON_KEY_FILE_PATH'),
         'scopes'          => 'https://www.googleapis.com/auth/dfp',
       ],
     ]);
