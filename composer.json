@@ -6,7 +6,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Limit0": "src/"
+      "Limit0\\": "src/"
     }
   }
 }
