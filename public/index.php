@@ -7,4 +7,5 @@ use Slim\App;
 
 $app = new App($container);
 $app->get('/', HomeController::class . ':index');
+$app->get('/_health', HomeController::class . ':health');
 $app->run();

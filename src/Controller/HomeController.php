@@ -29,15 +29,23 @@ class HomeController
    */
   public function index(Request $req, Response $res, array $args)
   {
+    return $res->withJson(['ping' => 'pong']);
+  }
+
+  /**
+   * @param Request $req
+   * @param Response $res
+   * @param array $args
+   */
+  public function health(Request $req, Response $res, array $args)
+  {
     $factory = $this->container->get('ad-manager.service-factory');
     $networkService = $factory->service(NetworkService::class);
     $network = $networkService->getCurrentNetwork();
 
-    $res->getBody()->write(sprintf(
-      '<pre>%s (%s)</pre>',
-      $network->getDisplayName(),
-      $network->getNetworkCode()
-    ));
-    return $res;
+    return $res->withJson([
+      'name' => $network->getDisplayName(),
+      'code' => $network->getNetworkCode(),
+    ]);
   }
 }
