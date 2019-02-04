@@ -1,15 +1,15 @@
 <?php
 require '../vendor/autoload.php';
+require 'container.php';
 
-use \Psr\Http\Message\ServerRequestInterface as Request;
-use \Psr\Http\Message\ResponseInterface as Response;
 use Google\AdsApi\AdManager\v201811\NetworkService;
-use Limit0\Test;
-use Limit0\AdManager\ServiceFactory;
+use Slim\App;
+use \Psr\Http\Message\ResponseInterface as Response;
+use \Psr\Http\Message\ServerRequestInterface as Request;
 
-$app = new \Slim\App;
+$app = new App($container);
 $app->get('/', function(Request $req, Response $res, array $args) {
-  $factory = new ServiceFactory();
+  $factory = $this->get('ad-manager.service-factory');
   $networkService = $factory->service(NetworkService::class);
   $network = $networkService->getCurrentNetwork();
 
