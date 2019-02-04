@@ -5,6 +5,13 @@ RUN apt-get update && \
 
 RUN curl --silent --show-error https://getcomposer.org/installer | php
 
+RUN apt-get update && \
+    apt-get install -y \
+      zip \
+      unzip \
+      libzip-dev \
+      && docker-php-ext-install zip
+
 ENV APACHE_DOCUMENT_ROOT /app/src/public
 
 RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf
