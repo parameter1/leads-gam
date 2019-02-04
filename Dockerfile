@@ -5,8 +5,11 @@ RUN apt-get update -qq \
     git \
     zip \
     unzip \
+    libxml2-dev \
     zlib1g-dev \
   && apt-get clean
+
+RUN docker-php-ext-install soap
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
