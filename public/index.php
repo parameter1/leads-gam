@@ -9,5 +9,5 @@ use Slim\App;
 $app = new App($container);
 $app->get('/', HomeController::class . ':index');
 $app->get('/_health', HomeController::class . ':health');
-$app->get('/lineitem-detail/{lid:[a-z0-9]+}/{cid:[a-z0-9]+}', AdManagerController::class . ':lineItemCreativeDetails');
+$app->get('/creative-detail/{lid:[a-z0-9]+}/{cid:[a-z0-9]+}', AdManagerController::class . ':creativeDetail');
 $app->run();

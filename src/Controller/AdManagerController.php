@@ -30,7 +30,7 @@ class AdManagerController
    * @param Response $res
    * @param array $args
    */
-  public function lineItemCreativeDetails(Request $req, Response $res, array $args)
+  public function creativeDetail(Request $req, Response $res, array $args)
   {
     $cid = $args['cid'];
     $lid = $args['lid'];
