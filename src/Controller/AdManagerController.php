@@ -61,7 +61,7 @@ class AdManagerController
     $result = [
       'id' => $cid,
       'name' => $creative->getName(),
-      'creativeType' => $creativeType,
+      'type' => $creativeType,
       'width' => $creative->getSize()->getWidth(),
       'height' => $creative->getSize()->getHeight(),
       'previewUrl' => $creative->getPreviewUrl(),
