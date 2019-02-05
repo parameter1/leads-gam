@@ -13,11 +13,11 @@ The service should now be available on `http://localhost:9017`
 
 ### Required Enviroment Variables
 ```sh
-  # The Google Ad Manager network code, e.g. 123456789
-  NETWORK_CODE=
+# The Google Ad Manager network code, e.g. 123456789
+NETWORK_CODE=
 
-  # Must be an absolute path
-  JSON_KEY_FILE_PATH=
+# Must be an absolute path
+JSON_KEY_FILE_PATH=
 ```
 
 ## Endpoints
