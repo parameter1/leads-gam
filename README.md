@@ -40,7 +40,7 @@ Runs a "health" check by connecting to the configured Google Ad Manager network 
 ```
 
 ### `/creative-detail/{lineitem-id}/{creative-id}`
-Returns creative, line item, and order details the for the provided `lineitem-id` and `creative-id`:
+Returns creative, line item, and order details for the provided `lineitem-id` and `creative-id`:
 ```json
 {
   "creative":{
