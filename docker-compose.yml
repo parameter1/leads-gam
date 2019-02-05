@@ -3,7 +3,7 @@ version: '3.7'
 services:
   app:
     tty: true
-    build: .
+    build: ./dev
     volumes:
     - .:/app:cached
     working_dir: /app
