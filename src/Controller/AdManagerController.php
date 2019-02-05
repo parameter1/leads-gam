@@ -59,21 +59,21 @@ class AdManagerController
     }
 
     $result = [
-      'id' => $cid,
+      'identifier' => $cid,
       'name' => $creative->getName(),
       'type' => $creativeType,
       'width' => $creative->getSize()->getWidth(),
       'height' => $creative->getSize()->getHeight(),
       'previewUrl' => $creative->getPreviewUrl(),
       'advertiser' => [
-        'id' => (string) $creative->getAdvertiserId(),
+        'identifier' => (string) $creative->getAdvertiserId(),
       ],
       'order' => [
-        'id' => (string) $lineitem->getOrderId(),
+        'identifier' => (string) $lineitem->getOrderId(),
         'name' => $lineitem->getOrderName(),
       ],
       'lineitem' => [
-        'id' => (string) $lineitem->getId(),
+        'identifier' => (string) $lineitem->getId(),
         'name' => $lineitem->getName(),
         'metrics' => $metrics,
       ],
