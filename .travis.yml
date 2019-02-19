@@ -1,0 +1,10 @@
+language: php
+php:
+- '7.3'
+deploy:
+  -
+    provider: script
+    script: bash deploy.sh
+    on:
+      tags: true
+      condition: "$TRAVIS_TAG =~ ^v[0-9]+\\.[0-9]+\\.[0-9]+$"
