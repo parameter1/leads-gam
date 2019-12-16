@@ -2,10 +2,10 @@
 
 namespace Limit0\Controller;
 
-use Google\AdsApi\AdManager\v201811\CreativeService;
-use Google\AdsApi\AdManager\v201811\LineItemService;
-use Google\AdsApi\AdManager\Util\v201811\StatementBuilder;
-use Google\AdsApi\AdManager\Util\v201811\AdManagerDateTimes;
+use Google\AdsApi\AdManager\v201911\CreativeService;
+use Google\AdsApi\AdManager\v201911\LineItemService;
+use Google\AdsApi\AdManager\Util\v201911\StatementBuilder;
+use Google\AdsApi\AdManager\Util\v201911\AdManagerDateTimes;
 use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
