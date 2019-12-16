@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "28e769c5fe01f1376ecc5f9d7bd09ebb",
+    "content-hash": "aba2299284151b095426787e76b32949",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -35,6 +35,7 @@
             ],
             "description": "Promoting the interoperability of container objects (DIC, SL, etc.)",
             "homepage": "https://github.com/container-interop/container-interop",
+            "abandoned": "psr/container",
             "time": "2017-02-14T19:40:03+00:00"
         },
         {
@@ -132,16 +133,16 @@
         },
         {
             "name": "googleads/googleads-php-lib",
-            "version": "39.0.0",
+            "version": "44.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleads/googleads-php-lib.git",
-                "reference": "33d2dc28d2f1b55e981a622fc43d308e236f8b4d"
+                "reference": "f5ffd579a5e3b53235b78caed0ec5aa5553e9ecb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleads/googleads-php-lib/zipball/33d2dc28d2f1b55e981a622fc43d308e236f8b4d",
-                "reference": "33d2dc28d2f1b55e981a622fc43d308e236f8b4d",
+                "url": "https://api.github.com/repos/googleads/googleads-php-lib/zipball/f5ffd579a5e3b53235b78caed0ec5aa5553e9ecb",
+                "reference": "f5ffd579a5e3b53235b78caed0ec5aa5553e9ecb",
                 "shasum": ""
             },
             "require": {
@@ -151,18 +152,17 @@
                 "google/auth": "^1.0.0",
                 "guzzlehttp/guzzle": "^6.0",
                 "guzzlehttp/psr7": "^1.2",
-                "monolog/monolog": "^1.17.1",
-                "php": ">=5.6",
+                "monolog/monolog": "^1.17.1 || ^2.0.0",
+                "php": ">=7.1",
                 "phpdocumentor/reflection-docblock": "^4.0.0 || ^3.0.3",
                 "symfony/serializer": "^2.8.0 || ^3.0.3 || ^4.0.0"
             },
             "require-dev": {
-                "php": ">=5.6",
-                "phpunit/phpunit": "^4.8.35 || ^5.7",
+                "phpunit/phpunit": "^7.5",
                 "squizlabs/php_codesniffer": "^2.9 || ^3.2"
             },
             "suggest": {
-                "php-64bit": ">=5.6"
+                "php-64bit": ">=7.1"
             },
             "type": "library",
             "autoload": {
@@ -182,7 +182,7 @@
             ],
             "description": "Google Ads APIs Client Library for PHP (AdWords and Ad Manager)",
             "homepage": "https://github.com/googleads/googleads-php-lib",
-            "time": "2019-01-24T08:45:15+00:00"
+            "time": "2019-11-06T14:48:37+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",

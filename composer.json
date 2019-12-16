@@ -3,7 +3,7 @@
   "description": "A GAM/DFP microservice for Lead Management",
   "require": {
     "slim/slim": "^3.12",
-    "googleads/googleads-php-lib": "^39.0"
+    "googleads/googleads-php-lib": "^44"
   },
   "autoload": {
     "psr-4": {
