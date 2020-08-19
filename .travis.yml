@@ -1,10 +1,46 @@
 language: php
-php:
-- '7.3'
-deploy:
-  -
-    provider: script
-    script: bash deploy.sh
-    on:
-      tags: true
-      condition: "$TRAVIS_TAG =~ ^v[0-9]+\\.[0-9]+\\.[0-9]+$"
+php: "7.3"
+
+_node-job: &node-job
+  language: node_js
+  node_js: 10.15
+  install: skip
+  env: [ENVIRONMENT=production]
+
+stages:
+  - name: test
+
+  - name: build
+    if: tag =~ /^v\d+\.\d+\.\d+$/
+
+  - name: production-started
+    if: tag =~ /^v\d+\.\d+\.\d+$/
+  - name: production
+    if: tag =~ /^v\d+\.\d+\.\d+$/
+  - name: production-finished
+    if: tag =~ /^v\d+\.\d+\.\d+$/
+
+jobs:
+  include:
+    - stage: test
+      name: Test app
+
+    - stage: build
+      name: Build app
+      install: skip
+      script: scripts/build-image.sh
+
+    - <<: *node-job
+      stage: production-started
+      name: Deployment Started
+      script: npx @base-cms/website-deployment-tool notify-started
+
+    - <<: *node-job
+      stage: production
+      name: GAM Service
+      script: npx @endeavorb2b/rancher2cli deploy l0-service leads-gam limit0/leads-gam:$TRAVIS_TAG
+
+    - <<: *node-job
+      stage: production-finished
+      name: Deployment Finished
+      script: npx @base-cms/website-deployment-tool notify-finished
