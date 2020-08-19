@@ -38,7 +38,7 @@ jobs:
     - <<: *npx-job
       stage: production
       name: GAM Service
-      script: npx @endeavorb2b/rancher2cli deploy l0-service leads-gam limit0/leads-gam:$TRAVIS_TAG
+      script: npx @endeavorb2b/rancher2cli deploy l0-service leads-gam parameter1/leads-gam:$TRAVIS_TAG
 
     - <<: *npx-job
       stage: production-finished
