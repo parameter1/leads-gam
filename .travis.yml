@@ -1,7 +1,7 @@
 language: php
 php: "7.3"
 
-_node-job: &node-job
+_npx-job: &npx-job
   language: node_js
   node_js: 10.15
   install: skip
@@ -30,17 +30,17 @@ jobs:
       install: skip
       script: scripts/build-image.sh
 
-    - <<: *node-job
+    - <<: *npx-job
       stage: production-started
       name: Deployment Started
       script: npx @base-cms/website-deployment-tool notify-started
 
-    - <<: *node-job
+    - <<: *npx-job
       stage: production
       name: GAM Service
       script: npx @endeavorb2b/rancher2cli deploy l0-service leads-gam limit0/leads-gam:$TRAVIS_TAG
 
-    - <<: *node-job
+    - <<: *npx-job
       stage: production-finished
       name: Deployment Finished
       script: npx @base-cms/website-deployment-tool notify-finished
