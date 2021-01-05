@@ -24,6 +24,7 @@ jobs:
   include:
     - stage: test
       name: Test app
+      install: composer install
 
     - stage: build
       name: Build app

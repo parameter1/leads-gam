@@ -3,3 +3,4 @@
 service_account.json
 
 .env
+.phpunit.result.cache
