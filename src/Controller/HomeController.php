@@ -2,7 +2,7 @@
 
 namespace Limit0\Controller;
 
-use Google\AdsApi\AdManager\v201811\NetworkService;
+use Google\AdsApi\AdManager\v202011\NetworkService;
 use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
